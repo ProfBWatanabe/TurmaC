@@ -1,0 +1,61 @@
+programa {
+
+  real Valor1, Valor2, Resultado
+  caracter opcao, invalido
+
+  funcao inicio() {
+    Valor1 = 1000
+    Valor2 = 200
+
+    escreva("Digite a letra 'a' para adição \n")
+    escreva("Digite a letra 's' para subtração \n")
+    escreva("Digite a letra 'm' para multiplicação \n")
+    escreva("Digite a letra 'd' para divisão \n")
+
+    leia(opcao)
+
+    escolha (opcao) {
+
+        caso "a" :
+          adicao(Valor1, Valor2)
+        pare
+        caso "s" :
+          subtracao(Valor1, Valor2)
+        pare
+        caso "m" :
+          multiplicacao(Valor1, Valor2)
+        pare
+        caso "d" :
+          divisao(Valor1, Valor2)
+        pare
+        caso contrario : {
+          escreva("Opção Inválida \n")
+           invalido = 's'
+          }
+
+    }
+      se (invalido == 's'){
+         escreva("Tente Novamente!")
+      } 
+      senao{ 
+         escreva("O resultado da Operação solicitada é: " + Resultado)
+      }
+  }
+
+  funcao adicao(real x , real y) {
+    Resultado = x + y
+  }
+
+  funcao subtracao(real x , real y) {
+    Resultado = x - y
+  }
+
+  funcao multiplicacao(real x , real y) {
+    Resultado = x * y
+  }
+
+  funcao divisao(real x , real y) {
+    Resultado = x / y
+  }
+
+}
